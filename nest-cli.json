@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/backend2/src",
+  "monorepo": true,
+  "root": "apps/backend2",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/backend2/tsconfig.app.json"
+  },
+  "projects": {
+    "backend2": {
+      "type": "application",
+      "root": "apps/backend2",
+      "entryFile": "main",
+      "sourceRoot": "apps/backend2/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/backend2/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    },
+    "threads": {
+      "type": "application",
+      "root": "apps/threads",
+      "entryFile": "main",
+      "sourceRoot": "apps/threads/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/threads/tsconfig.app.json"
+      }
+    },
+    "posts": {
+      "type": "application",
+      "root": "apps/posts",
+      "entryFile": "main",
+      "sourceRoot": "apps/posts/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/posts/tsconfig.app.json"
+      }
+    }
+  }
+}
